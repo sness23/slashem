@@ -22,9 +22,9 @@ const char *goal;
     winid tmpwin = create_nhwindow(NHW_MENU);
 
     Sprintf(sbuf, "Use [%s] to move the cursor to %s.",
-	    iflags.num_pad ? "2468" : "hjkl", goal);
+	    iflags.num_pad ? "2468" : "jkl;", goal);
     putstr(tmpwin, 0, sbuf);
-    putstr(tmpwin, 0, "Use [HJKL] to move the cursor 8 units at a time.");
+    putstr(tmpwin, 0, "Use [JKL:] to move the cursor 8 units at a time.");
     putstr(tmpwin, 0, "Or enter a background symbol (ex. <).");
     /* disgusting hack; the alternate selection characters work for any
        getpos call, but they only matter for dowhatis (and doquickwhatis) */
@@ -162,7 +162,7 @@ const char *goal;
 		    pline("Unknown direction: '%s' (%s).",
 			  visctrl((char)c),
 			  !force ? "aborted" :
-			  iflags.num_pad ? "use 2468 or ." : "use hjkl or .");
+			  iflags.num_pad ? "use 2468 or ." : "use jkl; or .");
 		    msg_given = TRUE;
 		} /* k => matching */
 	    } /* !quitchars */
