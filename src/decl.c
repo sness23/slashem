@@ -99,7 +99,7 @@ struct linfo level_info[MAXLINFO];
 NEARDATA struct sinfo program_state;
 
 /* 'rogue'-like direction commands (cmd.c) */
-const char sdir[] = "julim;kn><";  /* shifted right: h->j, y->u, k->l, u->i, l->;, n->m, j->k, b->n */
+const char sdir[] = "juli;mkn><";  /* shifted right: h->j, y->u, k->l, u->i, l->;, n->m, j->k, b->n */
 const char ndir[] = "47896321><";	/* number pad mode */
 const schar xdir[10] = { -1,-1, 0, 1, 1, 1, 0,-1, 0, 0 };
 const schar ydir[10] = {  0,-1,-1,-1, 0, 1, 1, 1, 0, 0 };
