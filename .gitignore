@@ -1,0 +1,98 @@
+# Compiled Object files
+*.o
+*.a
+
+# Executables
+src/slashem
+src/nethack
+util/recover
+util/dgn_comp
+util/lev_comp
+util/makedefs
+util/dlb
+util/tile2x11
+util/gif2txt
+util/txt2ppm
+util/tile2bmp
+util/uudecode
+
+# Generated header files
+include/date.h
+include/onames.h
+include/pm.h
+include/vis_tab.h
+include/tile.h
+
+# Generated data files
+dat/*.lev
+dat/data
+dat/rumors
+dat/oracles
+dat/options
+dat/quest.dat
+dat/dungeon
+dat/help
+dat/hh
+dat/cmdhelp
+dat/history
+dat/opthelp
+dat/wizhelp
+dat/*.dlb
+dat/nhshare
+dat/nhushare
+dat/gypsy.txt
+
+# Game state files
+dat/perm
+dat/record
+dat/logfile
+dat/xlogfile
+dat/livelog
+dat/sysconf
+dat/save/
+dat/bones*
+
+# Generated documentation
+doc/Guidebook
+doc/nethack.txt
+doc/*.ps
+doc/*.dvi
+
+# Yacc/Lex generated files (if you regenerate them)
+# Uncomment if you want to ignore the sys/share copies too
+# util/dgn_yacc.c
+# util/dgn_lex.c
+# util/lev_yacc.c
+# util/lev_lex.c
+# include/dgn_comp.h
+# include/lev_comp.h
+
+# Tile files
+win/share/monsters.txt
+win/share/objects.txt
+win/share/other.txt
+
+# Backup and temporary files
+*~
+*.bak
+*.orig
+*.rej
+*.swp
+.*.swp
+\#*\#
+.DS_Store
+
+# Build artifacts
+*.log
+core
+core.*
+
+# Wrapper script artifacts
+play.sh.log
+
+# Distribution/package files
+*.tar.gz
+*.tar.bz2
+*.zip
+*.rpm
+*.deb
