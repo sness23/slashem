@@ -232,8 +232,8 @@ const struct symdef defsyms[MAXPCHARS] = {
 	{'#', "iron bars",	C(HI_METAL)},	/* bars */
 	{'#', "tree",		C(CLR_GREEN)},	/* tree */
 	{'.', "floor of a room",C(CLR_GRAY)},	/* room */
-/*20*/	{'#', "corridor",	C(CLR_BLACK)},	/* dark corr */
-	{'#', "lit corridor",	C(CLR_GRAY)},	/* lit corr (see mapglyph.c) */
+/*20*/	{'#', "corridor",	C(CLR_GRAY)},	/* dark corr - changed from CLR_BLACK for visibility */
+	{'#', "lit corridor",	C(CLR_WHITE)},	/* lit corr (see mapglyph.c) - changed to WHITE for contrast */
 	{'<', "staircase up",	C(CLR_WHITE)},	/* upstair */
 	{'>', "staircase down",	C(CLR_WHITE)},	/* dnstair */
 	{'<', "ladder up",	C(CLR_BROWN)},	/* upladder */

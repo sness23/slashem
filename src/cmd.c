@@ -3121,7 +3121,7 @@ register char *cmd;
 		    } else
 			prefix_seen = TRUE;
 		    break;
-	 case 'm':  if (movecmd(cmd[1]) || u.dz) {
+	 case ',':  if (movecmd(cmd[1]) || u.dz) {
 			flags.run = 0;
 			flags.nopick = 1;
 			if (!u.dz) do_walk = TRUE;
@@ -3129,7 +3129,7 @@ register char *cmd;
 		    } else
 			prefix_seen = TRUE;
 		    break;
-	 case 'M':  if (movecmd(lowc(cmd[1]))) {
+	 case '=':  if (movecmd(lowc(cmd[1]))) {  /* was 'M', changed to avoid conflict */
 			flags.run = 1;
 			flags.nopick = 1;
 			do_rush = TRUE;
@@ -3151,6 +3151,13 @@ register char *cmd;
 			    break;
 		    }
 		    /*FALLTHRU*/
+	 case ':':  /* Shift-; should run right */
+		    if (movecmd(';')) {
+			flags.run = 1;
+			u.dx = 1; u.dy = 0; u.dz = 0;  /* right direction */
+			do_rush = TRUE;
+		    }
+		    break;
 	 default:   if (movecmd(*cmd)) {	/* ordinary movement */
 			flags.run = 0;	/* only matters here if it was 8 */
 			do_walk = TRUE;
